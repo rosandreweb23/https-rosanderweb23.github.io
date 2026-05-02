@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi página web - Andrea</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .contenedor {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #e74c3c;
+        }
+        img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 20px;
+            border: 4px solid #3498db;
+            margin: 20px auto;
+            display: block;
+        }
+        ul {
+            background-color: #ecf0f1;
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 15px;
+            list-style-type: square;
+            text-align: left;
+        }
+        li {
+            margin: 8px 0;
+            cursor: pointer;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e74c3c;
+        }
+        .info-texto {
+            margin-top: 20px;
+            font-size: 18px;
+            background-color: #ffeaa7;
+            padding: 12px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        iframe {
+            margin: 20px 0;
+            border-radius: 15px;
+            max-width: 100%;
+        }
+        footer {
+            margin-top: 40px;
+            color: #7f8c8d;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="contenedor">
+    <h1>Mi página web - Andrea</h1>
+    <h2>aprendiendo</h2>
+    
+    <ul>
+        <li id="correoItem">📧 mi correo electrónico</li>
+        <li id="seccionItem">📚 Rosa Tocuyo - sección 11A</li>
+    </ul>
+    
+    <a href="https://www.google.com" target="_blank">Ir a Google</a>
+    
+    <img src="https://curiara.com/wp-content/uploads/2025/03/cayo-morrocoy.jpg" alt="Paisaje">
+    
+    <!-- Video de Saray Rivera (Cada mañana) -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3rkfjX3fL_Y" 
+            title="Cada mañana - Saray Rivera" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+    
+    <p>Todo lo puedo en Cristo, que me fortalece.</p>
+    
+    <button id="botonCorreo">Mostrar correo</button>
+    <button id="botonSeccion">Mostrar sección</button>
+    
+    <div id="resultado" class="info-texto">Presiona un elemento o botón</div>
+    
+    <footer>© 2024 - Mi página web de Andrea Antequera</footer>
+</div>
+
+<script>
+    function mostrarCorreo() {
+        document.getElementById("resultado").innerHTML = "📧 novavianova69@gmail.com";
+    }
+    function mostrarSeccion() {
+        document.getElementById("resultado").innerHTML = "📚 Rosa Tocuyo - Sección 11A";
+    }
+    document.getElementById("correoItem").onclick = mostrarCorreo;
+    document.getElementById("seccionItem").onclick = mostrarSeccion;
+    document.getElementById("botonCorreo").onclick = mostrarCorreo;
+    document.getElementById("botonSeccion").onclick = mostrarSeccion;
+</script>
+</body>
+</html>
